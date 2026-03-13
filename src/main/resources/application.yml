@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    gcp:
+      project-id: ${GOOGLE_CLOUD_PROJECT:your-gcp-project-id}
+      sql:
+        database-name: ${DB_NAME:payments}
+        instance-connection-name: ${CLOUD_SQL_INSTANCE:your-project:europe-north1:your-instance}
+  datasource:
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  info:
+    title: Impact Payment Core API
+    version: 0.0.1
+
+app:
+  pubsub:
+    new-payments-topic: new-payments-topic

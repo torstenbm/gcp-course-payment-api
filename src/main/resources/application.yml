@@ -1,10 +1,10 @@
 spring:
   cloud:
     gcp:
-      project-id: ${GOOGLE_CLOUD_PROJECT:your-gcp-project-id}
+      project-id: ${GOOGLE_CLOUD_PROJECT}
       sql:
         database-name: ${DB_NAME:payments}
-        instance-connection-name: ${CLOUD_SQL_INSTANCE:your-project:europe-north1:your-instance}
+        instance-connection-name: ${CLOUD_SQL_INSTANCE}
   datasource:
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:}

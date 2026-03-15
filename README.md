@@ -49,8 +49,8 @@ gcloud auth application-default login
 ### Run
 
 ```bash
-GOOGLE_CLOUD_PROJECT=your-project \
-CLOUD_SQL_INSTANCE=your-project:europe-north1:your-instance \
+SPRING_CLOUD_GCP_PROJECT_ID=your-project \
+SPRING_CLOUD_GCP_SQL_INSTANCE_CONNECTION_NAME=your-project:europe-north1:your-instance \
 DB_NAME=payments \
 DB_USER=postgres \
 DB_PASSWORD=secret \

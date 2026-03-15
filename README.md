@@ -108,8 +108,8 @@ DB_PASSWORD=secret"
 
 | Variable              | Description                                          | Default                                     |
 |-----------------------|------------------------------------------------------|---------------------------------------------|
-| `GOOGLE_CLOUD_PROJECT`| GCP project ID                                      | —                                           |
-| `CLOUD_SQL_INSTANCE`  | Cloud SQL instance connection name                   | —                                           |
+| `SPRING_CLOUD_GCP_PROJECT_ID`| GCP project ID                                      | —                                           |
+| `SPRING_CLOUD_GCP_SQL_INSTANCE_CONNECTION_NAME`  | Cloud SQL instance connection name                   | —                                           |
 | `DB_NAME`             | Database name                                        | `payments`                                  |
 | `DB_USER`             | Database user                                        | `postgres`                                  |
 | `DB_PASSWORD`         | Database password                                    | —                                           |

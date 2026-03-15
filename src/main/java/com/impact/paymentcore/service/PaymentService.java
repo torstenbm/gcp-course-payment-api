@@ -54,6 +54,10 @@ public class PaymentService {
         return paymentRepository.save(payment);
     }
 
+    public void deleteAllPayments() {
+        paymentRepository.deleteAll();
+    }
+
     private void publishNewPaymentEvent(Payment payment) {
         PaymentPubSubMessage message = PaymentPubSubMessage.fromPayment(payment);
 

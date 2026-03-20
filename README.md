@@ -106,17 +106,17 @@ This event-driven design decouples payment creation from the advance logic, allo
 
 1. Navigate to IAM and create a service account for the payments API
 2. Navigate to CloudSQL and create a Postgres database with a username and a password
-    a. Give the service account the role `CloudSQL Client` for this DB
+   - Give the service account the role `CloudSQL Client` for this DB
 3. Create a Pub/Sub topic with name `new-payment-topic`
-    a. Give the service account the role `Pub/Sub Publisher` on this topic
+   - Give the service account the role `Pub/Sub Publisher` on this topic
 4. Fork this repository into your own github account
 5. Navigate to Cloud Run > Deploy a Webservice > Connect Repository and choose the fork
-    a. Chose sensible config
-    b. Add our CloudSQL DB in the CloudSQL Connections dropdown
-    c. Pass in the envs as described in this readme
+   - Chose sensible config
+   - Add our CloudSQL DB in the CloudSQL Connections dropdown
+   - Pass in the envs as described in this readme
 6. Once this API is successfully deployed, navigate to Cloud Run > Write a function > Java
-    a. Add trigger (Pub/Sub), chose the topic we created
-    b. Paste the java from the [`/cloud_function`](cloud_function) folder in this repo
+   - Add trigger (Pub/Sub), chose the topic we created
+   - Paste the java from the [`/cloud_function`](cloud_function) folder in this repo
 7. Once cloud function is successfully deployed, run `npm i & npm run dev` inside of the [`/dashboard`](dashboard) folder
 
 ## Deploying API only to Cloud Run With gcloud cli tool
